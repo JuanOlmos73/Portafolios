@@ -7,14 +7,14 @@ const techData = {
   tools:[["Jira"],["Trello"],["Scrum"],["Kanban"],["Git Flow"]]
 };
 const certs = [
-  {t:"JavaScript Moderno", meta:"53.5 h · 2024", src:"../assets/JsCertificadoUdemy.png", plat:"Udemy"},
-  {t:"Java y Jakarta EE", meta:"50 h · 2024", src:"../assets/javaCertificadoUdemy.png", plat:"Udemy"},
-  {t:"Oracle PL/SQL", meta:"12 h · 2024", src:"../assets/plsqlCertificadoUdemy.png", plat:"Udemy"},
-  {t:"SQL Avanzado", meta:"21 h · 2023", src:"../assets/sqlCertificadoUdemy.png", plat:"Udemy"},
-  {t:"Java", meta:"23 h · 2023", src:"../assets/javaCertificado2023Udemy.png", plat:"Udemy"},
-  {t:"JavaScript ES9", meta:"19 h · 2022", src:"../assets/JscriptES9Udemy.png", plat:"Udemy"},
-  {t:"SQL Básico", meta:"2 h · 2022", src:"../assets/SQLbasicoUdemy.png", plat:"Udemy"},
-  {t:"Introducción a la Seguridad Cibernética", meta:"2019", src:"../assets/CiberSeguridadCisco.png", plat:"Cisco"}
+  {t:"JavaScript Moderno", meta:"53.5 h · 2024", src:"/assets/JsCertificadoUdemy.png", plat:"Udemy"},
+  {t:"Java y Jakarta EE", meta:"50 h · 2024", src:"/assets/javaCertificadoUdemy.png", plat:"Udemy"},
+  {t:"Oracle PL/SQL", meta:"12 h · 2024", src:"/assets/plsqlCertificadoUdemy.png", plat:"Udemy"},
+  {t:"SQL Avanzado", meta:"21 h · 2023", src:"/assets/sqlCertificadoUdemy.png", plat:"Udemy"},
+  {t:"Java", meta:"23 h · 2023", src:"/assets/javaCertificado2023Udemy.png", plat:"Udemy"},
+  {t:"JavaScript ES9", meta:"19 h · 2022", src:"/assets/JscriptES9Udemy.png", plat:"Udemy"},
+  {t:"SQL Básico", meta:"2 h · 2022", src:"/assets/SQLbasicoUdemy.png", plat:"Udemy"},
+  {t:"Introducción a la Seguridad Cibernética", meta:"2019", src:"/assets/CiberSeguridadCisco.png", plat:"Cisco"}
 ];
 
 const CERT_BASE = "https://juanolmos73.github.io/Portafolios/";
