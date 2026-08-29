@@ -7,13 +7,13 @@ const techData = {
   tools:[["Jira"],["Trello"],["Scrum"],["Kanban"],["Git Flow"]]
 };
 const certs = [
-  {t:"JavaScript Moderno", meta:"53.5 h · 2024", src:"/assets/JsCertificadoUdemy.png", plat:"Udemy"},
-  {t:"Java y Jakarta EE", meta:"50 h · 2024", src:"/assets/javaCertificadoUdemy.png", plat:"Udemy"},
-  {t:"Oracle PL/SQL", meta:"12 h · 2024", src:"/assets/plsqlCertificadoUdemy.png", plat:"Udemy"},
-  {t:"SQL Avanzado", meta:"21 h · 2023", src:"/assets/sqlCertificadoUdemy.png", plat:"Udemy"},
-  {t:"Java", meta:"23 h · 2023", src:"/assets/javaCertificado2023Udemy.png", plat:"Udemy"},
-  {t:"JavaScript ES9", meta:"19 h · 2022", src:"/assets/JscriptES9Udemy.png", plat:"Udemy"},
-  {t:"SQL Básico", meta:"2 h · 2022", src:"/assets/SQLbasicoUdemy.png", plat:"Udemy"},
+  {t:"JavaScript Moderno", meta:"53.5 h · 2024", src:"assets/JsCertificadoUdemy.png", plat:"Udemy"},
+  {t:"Java y Jakarta EE", meta:"50 h · 2024", src:"assets/javaCertificadoUdemy.png", plat:"Udemy"},
+  {t:"Oracle PL/SQL", meta:"12 h · 2024", src:"assets/plsqlCertificadoUdemy.png", plat:"Udemy"},
+  {t:"SQL Avanzado", meta:"21 h · 2023", src:"assets/sqlCertificadoUdemy.png", plat:"Udemy"},
+  {t:"Java", meta:"23 h · 2023", src:"assets/javaCertificado2023Udemy.png", plat:"Udemy"},
+  {t:"JavaScript ES9", meta:"19 h · 2022", src:"assets/JscriptES9Udemy.png", plat:"Udemy"},
+  {t:"SQL Básico", meta:"2 h · 2022", src:"assets/SQLbasicoUdemy.png", plat:"Udemy"},
   {t:"Introducción a la Seguridad Cibernética", meta:"2019", src:"/assets/CiberSeguridadCisco.png", plat:"Cisco"}
 ];
 
@@ -260,7 +260,7 @@ document.getElementById('navToggle').addEventListener('click', ()=>{
 });
 
 // ---------- WhatsApp link (built at runtime, never printed as plain text) ----------
-(function(){
+/* (function(){
   const parts = ['5','2','4','4','3','3','0','0','1','5','5','6'];
   const num = parts.join('');
   const msg = encodeURIComponent('Hola Juan Luis, vi tu portafolio y me gustaría platicar sobre un proyecto.');
@@ -269,6 +269,26 @@ document.getElementById('navToggle').addEventListener('click', ()=>{
   document.getElementById('waContactLink').href = url;
   document.getElementById('waContactLink').target = '_blank';
   document.getElementById('waContactLink').rel = 'noopener';
+})();
+ */
+(function(){
+  const parts = ['5','2','4','4','3','3','0','0','1','5','5','6'];
+  const num = parts.join('');
+  const msg = encodeURIComponent('Hola Juan Luis, vi tu portafolio y me gustaría platicar sobre un proyecto.');
+  const url = `https://wa.me/${num}?text=${msg}`;
+
+  const waFab = document.getElementById('waFab');
+  const waContactLink = document.getElementById('waContactLink');
+
+  if (waFab) {
+    waFab.href = url;
+  }
+
+  if (waContactLink) {
+    waContactLink.href = url;
+    waContactLink.target = '_blank';
+    waContactLink.rel = 'noopener';
+  }
 })();
 
 // ---------- Chatbot (local, rule-based — no data leaves the browser) ----------
@@ -320,10 +340,12 @@ document.getElementById('navToggle').addEventListener('click', ()=>{
   });
 
   fab.addEventListener('click', ()=>{
+    console.log("entro aqui")
     panel.classList.toggle('open');
     if(panel.classList.contains('open') && !body.children.length){
       addMsg('¡Hola! Pregúntame sobre la experiencia, el stack, los proyectos o los servicios de Juan Luis.', 'bot');
     }
+    console.error("entro aqui 2")
   });
   closeBtn.addEventListener('click', ()=> panel.classList.remove('open'));
   sendBtn.addEventListener('click', ()=> ask(input.value));
