@@ -146,7 +146,6 @@ function buildStackGraph(){
       linkG.appendChild(l);
     });
   });
-  // cross-links between hubs (schema feel)
   const hubLinks = [["frontend","backend"],["backend","database"],["frontend","devops"],["backend","tools"],["database","devops"]];
   hubLinks.forEach(([a,b])=>{
     const ha = hubs.find(h=>h.cat===a), hb = hubs.find(h=>h.cat===b);
